@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:investmentor/create_account.dart';
+import 'package:investmentor/login.dart';
 
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(1000, 244, 244, 244),
-      body: Center(
+      body: Padding(padding: const EdgeInsets.all(40.0),
+      child: Center(
         child: Expanded(child: 
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -46,9 +48,9 @@ class FirstPage extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(MediaQuery.of(context).size.width * 0.8, 50),
+                fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0), // Kenarları oval yap
+                  borderRadius: BorderRadius.circular(20.0), // Kenarları oval yap
                 ),
                 backgroundColor: const Color.fromARGB(1000 ,0, 198, 121), // Buton rengini değiştir
               ),
@@ -61,11 +63,21 @@ class FirstPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            TextButton(onPressed: (){}, child: const Text('Giriş Yap', style: TextStyle(color:Color.fromARGB(1000 ,0, 198, 121),),))
+            TextButton(onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Login(),
+                  ),
+                );
+            }, 
+            child: 
+            const Text('Giriş Yap', style: TextStyle(color:Color.fromARGB(1000 ,0, 198, 121),fontSize: 16),))
           ],
         ),)
       
-      ),
+      ),) 
+      
       
     );
   }
