@@ -11,6 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       theme: ThemeData(
+        primarySwatch: Colors.green,
+        primaryColor: Color.fromARGB(1000 ,0, 198, 121), 
+       
+      ),
         home: SplashScreen(),
         routes: {
          '/firstpage': (context) => FirstPage(),

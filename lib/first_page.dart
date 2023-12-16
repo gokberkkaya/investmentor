@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/create_account.dart';
 
 class FirstPage extends StatelessWidget {
   @override
@@ -37,7 +38,12 @@ class FirstPage extends StatelessWidget {
             ElevatedButton(
               
               onPressed: () {
-                // Butona tıklandığında yapılacak işlemler
+                 Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CreateAccount(),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.8, 50),
