@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
 
-class CreateAccount extends StatefulWidget {
-  const CreateAccount({super.key});
+
+class ResetPassword extends StatefulWidget {
+  const ResetPassword({super.key});
 
   @override
-  State<CreateAccount> createState() => _CreateAccountState();
+  State<ResetPassword> createState() => _ResetPasswordState();
 }
 
-class _CreateAccountState extends State<CreateAccount> {
+class _ResetPasswordState extends State<ResetPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,26 +29,16 @@ class _CreateAccountState extends State<CreateAccount> {
             
           const SizedBox(height: 10),
             const Text(
-              'Bir hesap oluştur',
+              'Şifreni Sıfırla',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             const Text(
-              'Kolayca hesap oluştur ve işleme başla',
+              'Sana şifre sıfırlama maili göndereceğiz',
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 40),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: 'Kullanıcı Adı',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
             TextFormField(
               decoration: InputDecoration(
                
@@ -59,21 +49,10 @@ class _CreateAccountState extends State<CreateAccount> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            TextFormField(
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Şifre',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-              ),
-            ),
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Kayıt butonuna tıklandığında yapılacak işlemler
+                
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
@@ -87,21 +66,12 @@ class _CreateAccountState extends State<CreateAccount> {
                 
                 padding:  EdgeInsets.all(10.0),
                 child: Text(
-                  'Hesap Oluştur',
+                  'Sıfırla',
                   style: TextStyle(fontSize: 18),
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            TextButton(onPressed: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Login(),
-                  ),
-                );
-            }, 
-            child: const Text('Zaten hesabın var mı?', style: TextStyle(color:Color.fromARGB(1000 ,0, 198, 121), fontSize: 16),))
+           
           ],
         ),
       ),
