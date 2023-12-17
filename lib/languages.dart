@@ -54,7 +54,7 @@ class _LanguagesState extends State<Languages> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(40),
+        padding: const EdgeInsets.only(left: 40, right: 40, top: 40),
         child: Column(children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -77,8 +77,10 @@ class _LanguagesState extends State<Languages> {
             ),
           ]),
           const SizedBox(height: 40),
-          Column(
-            children: [
+
+        
+        Expanded(child: SingleChildScrollView(child: Container(
+            child: Column(children: [
               showLang("tr", "Türkçe",0),
               const SizedBox(height: 10),
               Divider(),
@@ -124,8 +126,11 @@ class _LanguagesState extends State<Languages> {
               showLang("bg", "Български", 14),
               const SizedBox(height: 10),
               Divider(),
-            ],
-          )
+            ]),
+          ),))
+
+
+
         ]),
       ),
     );
