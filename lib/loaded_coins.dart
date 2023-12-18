@@ -9,7 +9,7 @@ class LoadedCoins extends StatelessWidget {
     int upperBound = 10;
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(1000, 244, 244, 244),
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
@@ -56,7 +56,7 @@ class LoadedCoins extends StatelessWidget {
                 IconButton(
                   icon: const Icon(Icons.close),
                   onPressed: () {
-                    // Kapatma işlemi burada gerçekleştirilebilir.
+                    Navigator.pop(context);
                   },
                 ),
               ],

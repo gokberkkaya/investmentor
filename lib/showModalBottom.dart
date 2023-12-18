@@ -40,7 +40,7 @@ Container ModalBottomIcerik(icerik,context) {
                   ),
                   height: MediaQuery.of(context).size.height * 0.9,
                   child: 
-                    Padding(padding: EdgeInsets.only(top: 30, left: 20,right: 20,bottom: 10), child: icerik,)
+                    icerik,
                     
                   
                 );
