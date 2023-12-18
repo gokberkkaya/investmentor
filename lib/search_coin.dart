@@ -15,7 +15,7 @@ class _SearchCoinState extends State<SearchCoin> {
         padding: const EdgeInsets.all(40.0),
         child: Column(
           children: <Widget>[
-            Row(mainAxisAlignment: MainAxisAlignment.start, 
+            /* Row(mainAxisAlignment: MainAxisAlignment.start, 
             children: [
               IconButton(
               alignment: Alignment.topLeft,
@@ -25,15 +25,15 @@ class _SearchCoinState extends State<SearchCoin> {
                 },
             ),
             
-            ],),
+            ],), */
             
           const SizedBox(height: 10),
             const Text(
               'Coin Ara',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
-            ),SizedBox(height: 20.0,),
-             const SizedBox(height: 40),
+            ),
+             const SizedBox(height: 60),
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'Coin Seç',
