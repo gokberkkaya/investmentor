@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:investmentor/mainPage.dart';
+import 'package:investmentor/services/auth_service.dart';
 
 import 'reset_password.dart';
 
@@ -11,6 +11,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,8 +41,9 @@ class _LoginState extends State<Login> {
 
             const SizedBox(height: 40),
             TextFormField(
+              controller: _emailController,
               decoration: InputDecoration(
-                labelText: 'Kullanıcı Adı',
+                labelText: 'E-posta',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                   borderSide: BorderSide(color: Colors.grey),
@@ -49,6 +53,7 @@ class _LoginState extends State<Login> {
             SizedBox(height: 10),
             
             TextFormField(
+              controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Şifre',
@@ -61,11 +66,10 @@ class _LoginState extends State<Login> {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
+                AuthService().signIn(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => MainPage(),
-                  ),
+                  email: _emailController.text,
+                  password: _passwordController.text
                 );
               },
               style: ElevatedButton.styleFrom(

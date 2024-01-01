@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/services/auth_service.dart';
 import 'login.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -9,6 +10,10 @@ class CreateAccount extends StatefulWidget {
 }
 
 class _CreateAccountState extends State<CreateAccount> {
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +45,7 @@ class _CreateAccountState extends State<CreateAccount> {
             ),
             const SizedBox(height: 40),
             TextFormField(
+              controller: _nameController,
               decoration: InputDecoration(
                 labelText: 'Kullanıcı Adı',
                 border: OutlineInputBorder(
@@ -50,8 +56,8 @@ class _CreateAccountState extends State<CreateAccount> {
             ),
             SizedBox(height: 10),
             TextFormField(
+              controller: _emailController,
               decoration: InputDecoration(
-               
                 labelText: 'E-posta',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -61,6 +67,7 @@ class _CreateAccountState extends State<CreateAccount> {
             ),
             SizedBox(height: 10),
             TextFormField(
+              controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Şifre',
@@ -73,7 +80,12 @@ class _CreateAccountState extends State<CreateAccount> {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Kayıt butonuna tıklandığında yapılacak işlemler
+                AuthService().signUp(
+                  context,
+                  name: _nameController.text,
+                  email: _emailController.text,
+                  password: _passwordController.text
+                );
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
@@ -82,9 +94,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 ),
                 primary: Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
               ),
-              
               child: const Padding(
-                
                 padding:  EdgeInsets.all(10.0),
                 child: Text(
                   'Hesap Oluştur',
