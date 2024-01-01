@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:investmentor/contact.dart';
+import 'package:investmentor/first_page.dart';
 import 'package:investmentor/languages.dart';
 
 class Profile extends StatelessWidget {
@@ -98,6 +99,37 @@ class Profile extends StatelessWidget {
                     Icon(Icons.language, color: Colors.black,),
                     Text(
                       'Dil',
+                      style: TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
+                    ),
+                    Icon(Icons.arrow_forward_ios, color: Colors.black,),
+                  ],
+                ),
+              ),
+            ),
+             SizedBox(height: 20),
+            SizedBox(
+              height: 65,
+              width: MediaQuery.of(context).size.width ,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FirstPage(),
+                  ),
+                );
+                },
+                style: ElevatedButton.styleFrom(
+                  
+                  padding: EdgeInsets.all(20.0),
+                  primary: Colors.white,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.logout, color: Colors.black,),
+                    Text(
+                      'Çıkış Yap',
                       style: TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
                     ),
                     Icon(Icons.arrow_forward_ios, color: Colors.black,),
