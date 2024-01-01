@@ -29,6 +29,9 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   circle_flags: ^0.0.3
+  sqflite:
+  crypto: ^3.0.3
+  http: 1.1.0
   flutter:
     sdk: flutter
 
