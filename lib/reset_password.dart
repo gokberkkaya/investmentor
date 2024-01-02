@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 
 
 class ResetPassword extends StatefulWidget {
@@ -28,28 +29,28 @@ class _ResetPasswordState extends State<ResetPassword> {
             ],),
             
           const SizedBox(height: 10),
-            const Text(
-              'Şifreni Sıfırla',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            Text(
+              AppLocalizations.of(context)!.translate('reset_password_title'),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Sana şifre sıfırlama maili göndereceğiz',
-              style: TextStyle(fontSize: 16),
+            Text(
+              AppLocalizations.of(context)!.translate('reset_password_description'),
+              style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 40),
             TextFormField(
               decoration: InputDecoration(
                
-                labelText: 'E-posta',
+                labelText: AppLocalizations.of(context)!.translate('reset_password_email_label'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 
@@ -62,12 +63,12 @@ class _ResetPasswordState extends State<ResetPassword> {
                 primary: Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
               ),
               
-              child: const Padding(
+              child: Padding(
                 
-                padding:  EdgeInsets.all(10.0),
+                padding:  const EdgeInsets.all(10.0),
                 child: Text(
-                  'Sıfırla',
-                  style: TextStyle(fontSize: 18),
+                  AppLocalizations.of(context)!.translate('reset_password_reset_button'),
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
             ),

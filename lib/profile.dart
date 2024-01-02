@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/contact.dart';
 import 'package:investmentor/first_page.dart';
 import 'package:investmentor/languages.dart';
@@ -17,19 +18,19 @@ class Profile extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
             Text(
-              'Profil',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              AppLocalizations.of(context)!.translate('profile_title'),
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 60),
             Container(
               height: 120,
               width: MediaQuery.of(context).size.width * 0.5,
               decoration: BoxDecoration(
-                color: Color.fromARGB(1000 ,0, 198, 121),
+                color: const Color.fromARGB(1000 ,0, 198, 121),
                 borderRadius: BorderRadius.circular(20.0),
               ),
-              padding: EdgeInsets.all(20.0),
-              child: Column(
+              padding: const EdgeInsets.all(20.0),
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -44,7 +45,7 @@ class Profile extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             SizedBox(
               height: 65,
               width: MediaQuery.of(context).size.width ,
@@ -59,23 +60,23 @@ class Profile extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   primary: Colors.white,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.contacts, color: Colors.black,),
+                    const Icon(Icons.contacts, color: Colors.black,),
                     Text(
-                      'İletişim Bilgileri',
-                      style: TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
+                      AppLocalizations.of(context)!.translate('profile_contact_info_button'),
+                      style: const TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
                     ),
-                    Icon(Icons.arrow_forward_ios, color: Colors.black,),
+                    const Icon(Icons.arrow_forward_ios, color: Colors.black,),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 65,
               width: MediaQuery.of(context).size.width ,
@@ -90,23 +91,23 @@ class Profile extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   primary: Colors.white,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.language, color: Colors.black,),
+                    const Icon(Icons.language, color: Colors.black,),
                     Text(
-                      'Dil',
-                      style: TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
+                      AppLocalizations.of(context)!.translate('profile_language_button'),
+                      style: const TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
                     ),
-                    Icon(Icons.arrow_forward_ios, color: Colors.black,),
+                    const Icon(Icons.arrow_forward_ios, color: Colors.black,),
                   ],
                 ),
               ),
             ),
-             SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 65,
               width: MediaQuery.of(context).size.width ,
@@ -121,18 +122,18 @@ class Profile extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   primary: Colors.white,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.logout, color: Colors.black,),
+                    const Icon(Icons.logout, color: Colors.black,),
                     Text(
-                      'Çıkış Yap',
-                      style: TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
+                      AppLocalizations.of(context)!.translate('profile_logout_button'),
+                      style: const TextStyle(fontSize: 16,color: Colors.black, fontWeight: FontWeight.bold),
                     ),
-                    Icon(Icons.arrow_forward_ios, color: Colors.black,),
+                    const Icon(Icons.arrow_forward_ios, color: Colors.black,),
                   ],
                 ),
               ),

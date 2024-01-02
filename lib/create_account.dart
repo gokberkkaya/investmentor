@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/services/auth_service.dart';
 import 'login.dart';
 
@@ -25,7 +26,7 @@ class _CreateAccountState extends State<CreateAccount> {
             children: [
               IconButton(
               alignment: Alignment.topLeft,
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.pop(context);
                 },
@@ -33,51 +34,51 @@ class _CreateAccountState extends State<CreateAccount> {
             ],),
             
           const SizedBox(height: 10),
-            const Text(
-              'Bir hesap oluştur',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            Text(
+              AppLocalizations.of(context)!.translate('create_account_title'),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Kolayca hesap oluştur ve işleme başla',
-              style: TextStyle(fontSize: 16),
+            Text(
+              AppLocalizations.of(context)!.translate('create_account_subtitle'),
+              style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 40),
             TextFormField(
               controller: _nameController,
               decoration: InputDecoration(
-                labelText: 'Kullanıcı Adı',
+                labelText: AppLocalizations.of(context)!.translate('create_account_username'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextFormField(
               controller: _emailController,
               decoration: InputDecoration(
-                labelText: 'E-posta',
+                labelText: AppLocalizations.of(context)!.translate('create_account_email'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextFormField(
               controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Şifre',
+                labelText: AppLocalizations.of(context)!.translate('create_account_password'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 AuthService().signUp(
@@ -94,15 +95,15 @@ class _CreateAccountState extends State<CreateAccount> {
                 ),
                 primary: Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
               ),
-              child: const Padding(
-                padding:  EdgeInsets.all(10.0),
+              child: Padding(
+                padding:  const EdgeInsets.all(10.0),
                 child: Text(
-                  'Hesap Oluştur',
-                  style: TextStyle(fontSize: 18),
+                  AppLocalizations.of(context)!.translate('create_account_button'),
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextButton(onPressed: (){
               Navigator.push(
                   context,
@@ -111,7 +112,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
                 );
             }, 
-            child: const Text('Zaten hesabın var mı?', style: TextStyle(color:Color.fromARGB(1000 ,0, 198, 121), fontSize: 16),))
+            child:  Text(AppLocalizations.of(context)!.translate('create_account_already_have_account'), style: const TextStyle(color:Color.fromARGB(1000 ,0, 198, 121), fontSize: 16),))
           ],
         ),
       ),

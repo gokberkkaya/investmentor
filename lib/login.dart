@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/services/auth_service.dart';
 
 import 'reset_password.dart';
@@ -33,9 +34,9 @@ class _LoginState extends State<Login> {
             ],),
             
           const SizedBox(height: 10),
-            const Text(
-              'Giriş Yap',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            Text(
+              AppLocalizations.of(context)!.translate('login_title'),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
 
@@ -43,27 +44,27 @@ class _LoginState extends State<Login> {
             TextFormField(
               controller: _emailController,
               decoration: InputDecoration(
-                labelText: 'E-posta',
+                labelText: AppLocalizations.of(context)!.translate('login_username'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                   borderSide: BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             
             TextFormField(
               controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Şifre',
+                labelText: AppLocalizations.of(context)!.translate('login_password'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                   borderSide: BorderSide(color: Colors.grey),
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 AuthService().signIn(
@@ -80,16 +81,16 @@ class _LoginState extends State<Login> {
                 primary: Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
               ),
               
-              child: const Padding(
+              child: Padding(
                 
-                padding:  EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Giriş Yap',
-                  style: TextStyle(fontSize: 18),
+                  AppLocalizations.of(context)!.translate('login_button'),
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextButton(onPressed: (){
               Navigator.push(
                   context,

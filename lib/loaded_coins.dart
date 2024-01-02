@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 
 class LoadedCoins extends StatelessWidget {
   const LoadedCoins({Key? key}) : super(key: key);
@@ -26,9 +27,9 @@ class LoadedCoins extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                     children: [
-                      const TextSpan(
-                        text: ' ile ',
-                        style: TextStyle(
+                      TextSpan(
+                        text: AppLocalizations.of(context)!.translate('loaded_coins_and'),
+                        style: const TextStyle(
                           fontSize: 17,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -42,9 +43,9 @@ class LoadedCoins extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const TextSpan(
-                        text: ' aralığındaki coinler',
-                        style: TextStyle(
+                       TextSpan(
+                        text: AppLocalizations.of(context)!.translate('loaded_coins_range'),
+                        style: const TextStyle(
                           fontSize: 17,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -78,10 +79,10 @@ class LoadedCoins extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment
                             .center, // Dikeyde merkeze hizalama
                         children: [
-                          const Expanded(
+                           Expanded(
                             child: Text(
-                              'Alım-satım için uygunluk durumu',
-                              style: TextStyle(
+                              AppLocalizations.of(context)!.translate('loaded_coins_suitability_status'),
+                              style: const TextStyle(
                                 fontSize: 9,
                                 color: Colors.grey,
                               ),
@@ -107,9 +108,9 @@ class LoadedCoins extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(5),
                       width: MediaQuery.of(context).size.width * 0.17,
-                      child: const Text(
-                        'En ucuz olduğu borsa',
-                        style: TextStyle(
+                      child: Text(
+                        AppLocalizations.of(context)!.translate('loaded_coins_cheapest_exchange'),
+                        style: const TextStyle(
                           fontSize: 9,
                           color: Colors.grey,
                         ),
@@ -119,8 +120,8 @@ class LoadedCoins extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(5),
                       width: MediaQuery.of(context).size.width * 0.17,
-                      child: const Text('En pahalı olduğu borsa',
-                          style: TextStyle(
+                      child: Text(AppLocalizations.of(context)!.translate('loaded_coins_most_expensive_exchange'),
+                          style: const TextStyle(
                             fontSize: 9,
                             color: Colors.grey,
                           ),
@@ -129,9 +130,9 @@ class LoadedCoins extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(5),
                       width: MediaQuery.of(context).size.width * 0.15,
-                      child: const Text(
-                        'İki borsa arası fark',
-                        style: TextStyle(
+                      child: Text(
+                        AppLocalizations.of(context)!.translate('loaded_coins_price_difference'),
+                        style: const TextStyle(
                           fontSize: 9,
                           color: Colors.grey,
                         ),
@@ -178,14 +179,14 @@ class LoadedCoins extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          content: const Text(
-              '500 dolara göre hesaplanmıştır. Eğer bu miktarda satış yapılabilecek talep yoksa coin kırmızı gösterilir.'),
+          content:  Text(
+              AppLocalizations.of(context)!.translate('loaded_coins_info_dialog_content')),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: const Text('Kapat'),
+              child:  Text(AppLocalizations.of(context)!.translate('loaded_coins_close_button')),
             ),
           ],
         );

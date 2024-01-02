@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/loaded_coins.dart';
 import 'package:investmentor/notifications.dart';
 import 'package:investmentor/showModalBottom.dart';
@@ -28,37 +29,37 @@ class _HomePageState extends State<HomePage> {
             }, 
             icon: Icon(Icons.notifications_none))], mainAxisAlignment: MainAxisAlignment.end,),
             Text(
-              'Hoşgeldin, Ahmet.',
+              AppLocalizations.of(context)!.translate('home_page_welcome_message'),
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 60),
             Text(
-              'İki borsa arasındaki fark aralığını belirle:',
+              AppLocalizations.of(context)!.translate('home_page_define_interval'),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.grey[600]),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               children: [
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration(
-                      labelText: 'minimum %',
+                      labelText: AppLocalizations.of(context)!.translate('home_page_minimum_percentage'),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30.0),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
-                Text(
+                const SizedBox(width: 10),
+                const Text(
                   '-',
                   style: TextStyle(fontSize: 24),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration(
-                      labelText: 'maximum %',
+                      labelText: AppLocalizations.of(context)!.translate('home_page_maximum_percentage'),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30.0),
                       ),
@@ -67,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 showModalBottom(context, LoadedCoins());
@@ -82,8 +83,8 @@ class _HomePageState extends State<HomePage> {
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
-                  'Bu aralıktaki coinleri yükle',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  AppLocalizations.of(context)!.translate('home_page_load_coins_button'),
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
             ),

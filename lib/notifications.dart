@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 
 class Notifications extends StatefulWidget {
   const Notifications({super.key});
@@ -63,10 +64,10 @@ class _NotificationsState extends State<Notifications> {
               ],
             ),
             const SizedBox(height: 10),
-            const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
-                'Bildirimler',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                AppLocalizations.of(context)!.translate('notifications'),
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ]),

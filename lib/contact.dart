@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 
 
 class Contact extends StatefulWidget {
@@ -30,55 +31,55 @@ class _ContactState extends State<Contact> {
             ],),
             
           const SizedBox(height: 10),
-            const Text(
-              'İletişim Bilgileri',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            Text(
+              AppLocalizations.of(context)!.translate('contact_title'),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),SizedBox(height: marginOfHigh,),
             TextFormField(
-                decoration:const InputDecoration(
-                  labelText: "Kullanıcı adı",
-                  labelStyle: TextStyle(
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.translate('contact_username'),
+                  labelStyle: const TextStyle(
                     color: Color.fromARGB(51, 51, 51, 1)
                   ),
                 ),
               ),SizedBox(height: marginOfHigh,),
                TextFormField(
-                decoration:const InputDecoration(
-                  labelText: "Doğum Günü",
-                  labelStyle: TextStyle(
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.translate('contact_birthday'),
+                  labelStyle: const TextStyle(
+                    color:  Color.fromARGB(51, 51, 51, 1)
+                  ),
+                ),
+              ),SizedBox(height: marginOfHigh,),
+               TextFormField(
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.translate('contact_gender'),
+                  labelStyle: const TextStyle(
                     color: Color.fromARGB(51, 51, 51, 1)
                   ),
                 ),
               ),SizedBox(height: marginOfHigh,),
                TextFormField(
-                decoration:const InputDecoration(
-                  labelText: "Cinsiyet",
-                  labelStyle: TextStyle(
+                decoration:InputDecoration(
+                  labelText: AppLocalizations.of(context)!.translate('contact_email'),
+                  labelStyle: const TextStyle(
                     color: Color.fromARGB(51, 51, 51, 1)
                   ),
                 ),
               ),SizedBox(height: marginOfHigh,),
                TextFormField(
-                decoration:const InputDecoration(
-                  labelText: "E-posta",
-                  labelStyle: TextStyle(
-                    color: Color.fromARGB(51, 51, 51, 1)
-                  ),
-                ),
-              ),SizedBox(height: marginOfHigh,),
-               TextFormField(
-                decoration:const InputDecoration(
-                  labelText: "Telefon Numarası",
-                  labelStyle: TextStyle(
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.translate('contact_phone_number'),
+                  labelStyle: const TextStyle(
                     color: Color.fromARGB(51, 51, 51, 1)
                   ),
                 ),
               ),  SizedBox(height: marginOfHigh,),
               TextFormField(
-                decoration:const InputDecoration(
-                  labelText: "Adres",
-                  labelStyle: TextStyle(
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)!.translate('contact_address'),
+                  labelStyle: const TextStyle(
                     color: Color.fromARGB(51, 51, 51, 1)
                   ),
                 ),
@@ -95,12 +96,12 @@ class _ContactState extends State<Contact> {
                 primary:const Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
               ),
               
-              child: const Padding(
+              child:  Padding(
                 
-                padding:  EdgeInsets.all(10.0),
+                padding:  const EdgeInsets.all(10.0),
                 child: Text(
-                  'Güncelle',
-                  style: TextStyle(fontSize: 18),
+                  AppLocalizations.of(context)!.translate('contact_update_button'),
+                  style: const TextStyle(fontSize: 18),
                 ),
               ),
               )

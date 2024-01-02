@@ -156,6 +156,7 @@ Future<Map<String, dynamic>?> getPoloniexDepthPromise(String coin) async {
       List<dynamic> bids = responseData['bids'];
       List<dynamic> asks = responseData['asks'];
 
+      // ignore: unnecessary_null_comparison
       if (bids == null || asks == null) {
         return null;
       } else {

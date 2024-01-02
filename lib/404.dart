@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 
 class ErrorPage extends StatelessWidget {
   const ErrorPage({super.key});
@@ -24,16 +25,16 @@ class ErrorPage extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             
-            const Text(
-              'Opsss!',
+            Text(
+              AppLocalizations.of(context)!.translate('404_ops'),
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, ),
+              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold, ),
             ),
             const SizedBox(height: 5),
-            const Text(
-              'Bir şeyler ters gitti,\nlütfen tekrar dene',
+            Text(
+              AppLocalizations.of(context)!.translate('404_message'),
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ],
         ),

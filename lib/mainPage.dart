@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/homePage.dart';
 import 'package:investmentor/profile.dart';
 import 'package:investmentor/search_coin.dart';
@@ -25,16 +26,16 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
               items: [
                 BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Ana Sayfa',
+            icon: const Icon(Icons.home),
+            label: AppLocalizations.of(context)!.translate('main_page_home_tab'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Coin Ara',
+            icon: const Icon(Icons.search),
+            label: AppLocalizations.of(context)!.translate('main_page_search_tab'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profil',
+            icon: const Icon(Icons.person),
+            label: AppLocalizations.of(context)!.translate('main_page_profile_tab'),
           ),
               ],
               currentIndex: _currentIndex,
