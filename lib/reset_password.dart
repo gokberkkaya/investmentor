@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:investmentor/app_localizations.dart';
+import 'package:investmentor/services/auth_service.dart';
 
 
 class ResetPassword extends StatefulWidget {
@@ -10,6 +11,8 @@ class ResetPassword extends StatefulWidget {
 }
 
 class _ResetPasswordState extends State<ResetPassword> {
+  final _emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,8 +44,8 @@ class _ResetPasswordState extends State<ResetPassword> {
             ),
             const SizedBox(height: 40),
             TextFormField(
+              controller: _emailController,
               decoration: InputDecoration(
-               
                 labelText: AppLocalizations.of(context)!.translate('reset_password_email_label'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -53,7 +56,10 @@ class _ResetPasswordState extends State<ResetPassword> {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                
+                AuthService().resetPassword(
+                  context,
+                  email: _emailController.text
+                );
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
