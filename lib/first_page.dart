@@ -21,7 +21,7 @@ class FirstPage extends StatelessWidget {
               
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/giris.png'), // Resmi değiştir
+                  image: AssetImage('assets/images/giris.png'), // Resmi değiştir
                   fit: BoxFit.fitHeight,
                 ),
               ),

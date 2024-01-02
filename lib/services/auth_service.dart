@@ -1,7 +1,8 @@
 import 'dart:async';
+import 'package:another_flushbar/flushbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+
 import 'package:flutter/material.dart';
 import 'package:investmentor/mainPage.dart';
 import 'package:investmentor/login.dart';
@@ -25,15 +26,19 @@ class AuthService {
       if (userCredential.user != null) {
         _registerUser(name: name, email: email, password: password);
 
-        Fluttertoast.showToast(
-          msg: "E-postana doğrulama bağlantısı gönderildi!",
-          toastLength: Toast.LENGTH_LONG
-        );
+        Flushbar(
+          message: "E-postana doğrulama bağlantısı gönderildi!",
+          duration: Duration(seconds: 3),
+        ).show(context);
 
         navigator.push(MaterialPageRoute(builder: (context) => const EmailVerification()));
       }
     } on FirebaseAuthException catch (e) {
-      Fluttertoast.showToast(msg: e.message!, toastLength: Toast.LENGTH_LONG);
+      Flushbar(
+          message: e.message!,
+          duration: Duration(seconds: 3),
+        ).show(context);
+      
     }
   }
 
@@ -51,7 +56,10 @@ class AuthService {
         navigator.push(MaterialPageRoute(builder: (context) => const MainPage()));
       }
     } on FirebaseAuthException catch (e) {
-      Fluttertoast.showToast(msg: e.message!, toastLength: Toast.LENGTH_LONG);
+      Flushbar(
+          message: e.message!,
+          duration: Duration(seconds: 3),
+        ).show(context);
     }
   }
 
@@ -74,15 +82,17 @@ class AuthService {
 
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
-
-      Fluttertoast.showToast(
-        msg: "Şifre sıfırlama e-postası gönderildi!",
-        toastLength: Toast.LENGTH_LONG
-      );
-
+      Flushbar(
+          message: "Şifre sıfırlama e-postası gönderildi!",
+          duration: Duration(seconds: 3),
+        ).show(context);
+      
       navigator.push(MaterialPageRoute(builder: (context) => const Login()));
     } on FirebaseAuthException catch (e) {
-      Fluttertoast.showToast(msg: e.message!, toastLength: Toast.LENGTH_LONG);
+      Flushbar(
+          message: e.message!,
+          duration: Duration(seconds: 3),
+        ).show(context);
     }
   }
 }

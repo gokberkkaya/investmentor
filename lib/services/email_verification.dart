@@ -1,6 +1,6 @@
 import 'dart:async';
+import 'package:another_flushbar/flushbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
 import 'package:investmentor/create_account.dart';
 import 'package:investmentor/mainPage.dart';
@@ -55,7 +55,10 @@ class _EmailVerificationState extends State<EmailVerification> {
   
       await user.sendEmailVerification();
     } on FirebaseAuthException catch (e) {
-      Fluttertoast.showToast(msg: e.message!, toastLength: Toast.LENGTH_LONG);
+      Flushbar(
+          message: e.message!,
+          duration: Duration(seconds: 3),
+        ).show(context);
     }
   }
 
