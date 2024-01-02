@@ -1,0 +1,69 @@
+{
+    "404_ops": "Oups !",
+    "404_message": "Quelque chose s'est mal passé,\nveuillez réessayer",
+
+    "contact_title": "Coordonnées",
+    "contact_username": "Nom d'utilisateur",
+    "contact_birthday": "Date de naissance",
+    "contact_gender": "Genre",
+    "contact_email": "E-mail",
+    "contact_phone_number": "Numéro de téléphone",
+    "contact_address": "Adresse",
+    "contact_update_button": "Mettre à jour",
+
+    "create_account_title": "Créer un compte",
+    "create_account_subtitle": "Créez facilement un compte et commencez",
+    "create_account_username": "Nom d'utilisateur",
+    "create_account_email": "E-mail",
+    "create_account_password": "Mot de passe",
+    "create_account_button": "Créer un compte",
+    "create_account_already_have_account": "Vous avez déjà un compte ?",
+
+    "first_page_title": "Un clic pour maîtriser le monde de la cryptomonnaie",
+    "first_page_description": "Détectez les différences de pourcentage dans les prix des pièces répertoriées sur différentes bourses de cryptomonnaie",
+    "first_page_create_account_button": "Créer un compte",
+    "first_page_login_button": "Se connecter",
+
+    "home_page_welcome_message": "Bienvenue, Ahmet.",
+    "home_page_define_interval": "Définir l'intervalle de différence entre deux échanges :",
+    "home_page_minimum_percentage": "minimum %",
+    "home_page_maximum_percentage": "maximum %",
+    "home_page_load_coins_button": "Charger les pièces dans cette plage",
+
+    "languages_title": "Préférence de langue",
+
+    "loaded_coins_and": " et ",
+    "loaded_coins_range": " pièces dans la plage",
+    "loaded_coins_suitability_status": "État d'adéquation pour le trading",
+    "loaded_coins_cheapest_exchange": "Bourse la moins chère",
+    "loaded_coins_most_expensive_exchange": "Bourse la plus chère",
+    "loaded_coins_price_difference": "Différence entre deux bourses",
+    "loaded_coins_info_dialog_content": "Calculé sur la base de 500 dollars. Si aucune demande de vente n'existe à ce montant, la pièce est affichée en rouge.",
+    "loaded_coins_close_button": "Fermer",
+
+    "login_title": "Se connecter",
+    "login_username": "Nom d'utilisateur",
+    "login_password": "Mot de passe",
+    "login_button": "Se connecter",
+    "login_forgot_password": "Mot de passe oublié ?",
+
+    "main_page_home_tab": "Accueil",
+    "main_page_search_tab": "Rechercher une cryptomonnaie",
+    "main_page_profile_tab": "Profil",
+
+    "notifications": "Notifications",
+
+    "profile_title": "Profil",
+    "profile_contact_info_button": "Coordonnées",
+    "profile_language_button": "Langue",
+    "profile_logout_button": "Se déconnecter",
+
+    "reset_password_title": "Réinitialiser le mot de passe",
+    "reset_password_description": "Nous vous enverrons un e-mail pour réinitialiser votre mot de passe",
+    "reset_password_email_label": "E-mail",
+    "reset_password_reset_button": "Réinitialiser",
+
+    "search_coin_title": "Rechercher une cryptomonnaie",
+    "search_coin_coin_select_label": "Sélectionnez une cryptomonnaie",
+    "search_coin_search_button": "Rechercher"
+}

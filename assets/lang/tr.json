@@ -1,0 +1,70 @@
+{
+    "404_ops": "Opsss!",
+    "404_message": "Bir şeyler ters gitti,\nlütfen tekrar dene",
+    
+    "contact_title": "İletişim Bilgileri",
+    "contact_username": "Kullanıcı Adı",
+    "contact_birthday": "Doğum Günü",
+    "contact_gender": "Cinsiyet",
+    "contact_email": "E-posta",
+    "contact_phone_number": "Telefon Numarası",
+    "contact_address": "Adres",
+    "contact_update_button": "Güncelle",
+
+    "create_account_title": "Bir hesap oluştur",
+    "create_account_subtitle": "Kolayca hesap oluştur ve işleme başla",
+    "create_account_username": "Kullanıcı Adı",
+    "create_account_email": "E-posta",
+    "create_account_password": "Şifre",
+    "create_account_button": "Hesap Oluştur",
+    "create_account_already_have_account": "Zaten hesabın var mı?",
+
+    "first_page_title": "Tek tuşla kripto dünyasına hakim ol",
+    "first_page_description": "Farklı kripto para borsalarında listelenen coinlerin fiyatlarında meydana gelen yüzdelik farkları tespit et",
+    "first_page_create_account_button": "Hesap Oluştur",
+    "first_page_login_button": "Giriş Yap",
+
+    "home_page_welcome_message": "Hoşgeldin, Ahmet.",
+    "home_page_define_interval": "İki borsa arasındaki fark aralığını belirle:",
+    "home_page_minimum_percentage": "minimum %",
+    "home_page_maximum_percentage": "maximum %",
+    "home_page_load_coins_button": "Bu aralıktaki coinleri yükle",
+    
+
+    "languages_title":"Dil Tercihi",
+
+    "loaded_coins_and": " ile ",
+    "loaded_coins_range":" aralığındaki coinler",
+    "loaded_coins_suitability_status": "Alım-satım için uygunluk durumu",
+    "loaded_coins_cheapest_exchange": "En ucuz olduğu borsa",
+    "loaded_coins_most_expensive_exchange": "En pahalı olduğu borsa",
+    "loaded_coins_price_difference": "İki borsa arası fark",
+    "loaded_coins_info_dialog_content": "500 dolara göre hesaplanmıştır. Eğer bu miktarda satış yapılabilecek talep yoksa coin kırmızı gösterilir.",
+    "loaded_coins_close_button": "Kapat",
+
+    "login_title": "Giriş Yap",
+    "login_username": "Kullanıcı Adı",
+    "login_password": "Şifre",
+    "login_button": "Giriş Yap",
+    "login_forgot_password": "Şifremi Unuttum",
+
+    "main_page_home_tab": "Ana Sayfa",
+    "main_page_search_tab": "Coin Ara",
+    "main_page_profile_tab": "Profil",
+
+    "notifications": "Bildirimler",
+
+    "profile_title": "Profil",
+    "profile_contact_info_button": "İletişim Bilgileri",
+    "profile_language_button": "Dil",
+    "profile_logout_button": "Çıkış Yap",
+
+    "reset_password_title": "Şifreni Sıfırla",
+    "reset_password_description": "Sana şifre sıfırlama maili göndereceğiz",
+    "reset_password_email_label": "E-posta",
+    "reset_password_reset_button": "Sıfırla",
+
+    "search_coin_title": "Coin Ara",
+    "search_coin_coin_select_label": "Coin Seç",
+    "search_coin_search_button": "Ara"
+}
