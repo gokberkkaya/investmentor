@@ -19,13 +19,13 @@ Future<List<Map<String, dynamic>>> getAllPricesExchanges() async {
 
 
 
-Future<List<Map<String, String>>> getPoloniexPrices() async {
+Future<List<Map<String, dynamic>>> getPoloniexPrices() async {
   try {
     final response = await http.get(Uri.parse('https://api.poloniex.com/markets/ticker24h'));
     
     final data = json.decode(response.body);
 
-    List<Map<String, String>> values = [];
+    List<Map<String, dynamic>> values = [];
 
     for (int i = 0; i < data.length; i++) {
       String symbol = data[i]['symbol'];
@@ -34,9 +34,9 @@ Future<List<Map<String, String>>> getPoloniexPrices() async {
 
         values.add({
           'name': symbol.substring(0, symbol.length - 5), // USDT_ kelimesini kaldır
-          'value': data[i]['close'].toString(),
-          'bid': data[i]['bid'].toString(),
-          'ask': data[i]['ask'].toString(),
+          'value':double.parse(data[i]['close']),
+          'bid':  double.parse(data[i]['bid']),
+          'ask':  double.parse(data[i]['ask']),
         });
       }
     }
@@ -50,12 +50,12 @@ Future<List<Map<String, String>>> getPoloniexPrices() async {
 }
 
 
-Future<List<Map<String, String>>> getMexcPrices() async {
+Future<List<Map<String, dynamic>>> getMexcPrices() async {
   try {
     final response = await http.get(Uri.parse('https://www.mexc.com/open/api/v2/market/ticker'));
     final data = json.decode(response.body)['data'];
 
-    List<Map<String, String>> values = [];
+    List<Map<String, dynamic>> values = [];
 
     for (int i = 0; i < data.length; i++) {
       String symbol = data[i]['symbol'];
@@ -70,9 +70,9 @@ Future<List<Map<String, String>>> getMexcPrices() async {
           !symbol.contains('2L_')) {
         values.add({
           'name': symbol.substring(0, symbol.length - 5),
-          'value': data[i]['last'].toString(),
-          'bid': data[i]['bid'].toString(),
-          'ask': data[i]['ask'].toString(),
+          'value': double.parse(data[i]['last']),
+          'bid':   double.parse(data[i]['bid']),
+          'ask':   double.parse(data[i]['ask']),
         });
       }
     }
@@ -94,7 +94,7 @@ Future<List<Map<String, dynamic>>> getKucoinPrices() async {
     List<Map<String, dynamic>> values = [];
 
     for (final key in data.keys) {
-      values.add({'name': key, 'value': data[key]});
+      values.add({'name': key, 'value': double.parse(data[key])});
     }
 
     print('kucoin');
@@ -106,12 +106,12 @@ Future<List<Map<String, dynamic>>> getKucoinPrices() async {
 }
 
 
-Future<List<Map<String, String>>> getGatePrices() async {
+Future<List<Map<String, dynamic>>> getGatePrices() async {
   try {
     final response = await http.get(Uri.parse('https://api.gateio.ws/api/v4/spot/tickers'));
     final data = json.decode(response.body);
 
-    List<Map<String, String>> values = [];
+    List<Map<String, dynamic>> values = [];
 
     for (int i = 0; i < data.length; i++) {
       String currencyPair = data[i]['currency_pair'];
@@ -126,9 +126,9 @@ Future<List<Map<String, String>>> getGatePrices() async {
           !currencyPair.contains('2L_')) {
         values.add({
           'name': currencyPair.substring(0, currencyPair.length - 5),
-          'value': data[i]['last'].toString(),
-          'bid': data[i]['highest_bid'].toString(),
-          'ask': data[i]['lowest_ask'].toString(),
+          'value': double.parse(data[i]['last']),
+          'bid':   double.parse(data[i]['highest_bid']),
+          'ask':   double.parse(data[i]['lowest_ask']),
         });
       }
     }
@@ -143,21 +143,21 @@ Future<List<Map<String, String>>> getGatePrices() async {
 
 
 
-Future<List<Map<String, String>>> getHuobiPrices() async {
+Future<List<Map<String, dynamic>>> getHuobiPrices() async {
   try {
     final response = await http.get(Uri.parse('https://api.huobi.pro/market/tickers'));
     final data = json.decode(response.body)['data'];
 
-    List<Map<String, String>> values = [];
+    List<Map<String, dynamic>> values = [];
 
     for (int i = 0; i < data.length; i++) {
       String symbol = data[i]['symbol'];
       if (symbol.endsWith('usdt')) {
         values.add({
           'name': symbol.substring(0, symbol.length - 4).toUpperCase(),
-          'value': data[i]['close'].toString(),
-          'bid': data[i]['bid'].toString(),
-          'ask': data[i]['ask'].toString(),
+          'value': double.parse(data[i]['close']),
+          'bid': double.parse(data[i]['bid']),
+          'ask': double.parse(data[i]['ask']),
         });
       }
     }
@@ -165,7 +165,7 @@ Future<List<Map<String, String>>> getHuobiPrices() async {
     print('huobi');
     return values;
   } catch (error) {
-    print('Hata oluştu: $error');
+    print('Hata oluşhjtu: $error');
     return [];
   }
 }
