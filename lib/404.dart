@@ -7,7 +7,7 @@ class ErrorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(1000, 244, 244, 244),
+      backgroundColor: const Color.fromARGB(1000, 244, 244, 244),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

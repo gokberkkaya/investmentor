@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
             children: [
               IconButton(
               alignment: Alignment.topLeft,
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.pop(context);
                 },
@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
                 labelText: AppLocalizations.of(context)!.translate('login_username'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                 ),
               ),
             ),
@@ -60,7 +60,7 @@ class _LoginState extends State<Login> {
                 labelText: AppLocalizations.of(context)!.translate('login_password'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                 ),
               ),
             ),
@@ -74,11 +74,10 @@ class _LoginState extends State<Login> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
+                fixedSize: Size(MediaQuery.of(context).size.width * 1, 50), backgroundColor: const Color.fromARGB(1000 ,0, 198, 121),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0), // Oval hale getir
-                ),
-                primary: Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
+                ), // Yeşil renk
               ),
               
               child: Padding(
@@ -95,11 +94,11 @@ class _LoginState extends State<Login> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ResetPassword(),
+                    builder: (context) => const ResetPassword(),
                   ),
                 );
             }, 
-            child: const Text('Şifremi Unuttum', style: TextStyle(color:Color.fromARGB(1000 ,0, 198, 121), fontSize: 16),))
+            child: Text(AppLocalizations.of(context)!.translate('login_forgot_password'), style: const TextStyle(color:Color.fromARGB(1000 ,0, 198, 121), fontSize: 16),))
           ],
         ),
       ),

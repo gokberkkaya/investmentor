@@ -89,11 +89,10 @@ class _CreateAccountState extends State<CreateAccount> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
+                fixedSize: Size(MediaQuery.of(context).size.width * 1, 50), backgroundColor: const Color.fromARGB(1000 ,0, 198, 121),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0), // Oval hale getir
-                ),
-                primary: Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
+                ), // Yeşil renk
               ),
               child: Padding(
                 padding:  const EdgeInsets.all(10.0),
@@ -108,7 +107,7 @@ class _CreateAccountState extends State<CreateAccount> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Login(),
+                    builder: (context) => const Login(),
                   ),
                 );
             }, 

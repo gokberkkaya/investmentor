@@ -54,14 +54,13 @@ class Profile extends StatelessWidget {
                   Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Contact(),
+                    builder: (context) => const Contact(),
                   ),
                 );
                 },
                 style: ElevatedButton.styleFrom(
                   
-                  padding: const EdgeInsets.all(20.0),
-                  primary: Colors.white,
+                  padding: const EdgeInsets.all(20.0), backgroundColor: Colors.white,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -85,14 +84,13 @@ class Profile extends StatelessWidget {
                   Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Languages(),
+                    builder: (context) => const Languages(),
                   ),
                 );
                 },
                 style: ElevatedButton.styleFrom(
                   
-                  padding: const EdgeInsets.all(20.0),
-                  primary: Colors.white,
+                  padding: const EdgeInsets.all(20.0), backgroundColor: Colors.white,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -122,8 +120,7 @@ class Profile extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   
-                  padding: const EdgeInsets.all(20.0),
-                  primary: Colors.white,
+                  padding: const EdgeInsets.all(20.0), backgroundColor: Colors.white,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

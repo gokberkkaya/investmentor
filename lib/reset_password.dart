@@ -24,7 +24,7 @@ class _ResetPasswordState extends State<ResetPassword> {
             children: [
               IconButton(
               alignment: Alignment.topLeft,
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.pop(context);
                 },
@@ -62,11 +62,10 @@ class _ResetPasswordState extends State<ResetPassword> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
+                fixedSize: Size(MediaQuery.of(context).size.width * 1, 50), backgroundColor: const Color.fromARGB(1000 ,0, 198, 121),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0), // Oval hale getir
-                ),
-                primary: Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
+                ), // Yeşil renk
               ),
               
               child: Padding(

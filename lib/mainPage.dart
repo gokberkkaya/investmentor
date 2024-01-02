@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
-        children: [
+        children: const [
           HomePage(),
           SearchCoin(),
           Profile()

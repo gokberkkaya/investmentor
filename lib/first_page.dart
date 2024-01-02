@@ -8,7 +8,7 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(1000, 244, 244, 244),
+      backgroundColor: const Color.fromARGB(1000, 244, 244, 244),
       body: Padding(padding: const EdgeInsets.all(40.0),
       child: Center(
         child: Expanded(child: 
@@ -45,7 +45,7 @@ class FirstPage extends StatelessWidget {
                  Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CreateAccount(),
+                    builder: (context) => const CreateAccount(),
                   ),
                 );
               },
@@ -69,12 +69,12 @@ class FirstPage extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Login(),
+                    builder: (context) => const Login(),
                   ),
                 );
             }, 
             child: 
-             Text(AppLocalizations.of(context)!.translate('first_page_login_button'), style: TextStyle(color:Color.fromARGB(1000 ,0, 198, 121),fontSize: 16),))
+             Text(AppLocalizations.of(context)!.translate('first_page_login_button'), style: const TextStyle(color:Color.fromARGB(1000 ,0, 198, 121),fontSize: 16),))
           ],
         ),)
       

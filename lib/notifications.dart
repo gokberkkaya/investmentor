@@ -56,7 +56,7 @@ class _NotificationsState extends State<Notifications> {
               children: [
                 IconButton(
                   alignment: Alignment.topLeft,
-                  icon: Icon(Icons.arrow_back),
+                  icon: const Icon(Icons.arrow_back),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -75,19 +75,17 @@ class _NotificationsState extends State<Notifications> {
 
           const SizedBox(height: 30,),
 
-          Expanded(child: SingleChildScrollView(child: Container(
-            child: Column(children: [
-              getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
-              getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
-              getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
-              getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
-              getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
-              getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
-              getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
-              getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
-              getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
-            ]),
-          ),))
+          Expanded(child: SingleChildScrollView(child: Column(children: [
+            getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
+            getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
+            getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
+            getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
+            getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
+            getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
+            getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
+            getNotification("İletişim bilgilerini hala güncellemedin,güncellemeye ne dersin?", "3sa önce"),
+            getNotification("3 gündür seni göremedik, yatırımlarını kontrol etmek ister misin?", "15dk önce"),
+          ]),))
           
 
          

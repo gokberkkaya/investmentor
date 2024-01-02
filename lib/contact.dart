@@ -22,7 +22,7 @@ class _ContactState extends State<Contact> {
             children: [
               IconButton(
               alignment: Alignment.topLeft,
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.pop(context);
                 },
@@ -89,11 +89,10 @@ class _ContactState extends State<Contact> {
                 
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(MediaQuery.of(context).size.width * 0.8, 50),
+                fixedSize: Size(MediaQuery.of(context).size.width * 0.8, 50), backgroundColor: const Color.fromARGB(1000 ,0, 198, 121),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0), // Oval hale getir
-                ),
-                primary:const Color.fromARGB(1000 ,0, 198, 121), // Yeşil renk
+                ), // Yeşil renk
               ),
               
               child:  Padding(

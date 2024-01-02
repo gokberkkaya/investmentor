@@ -19,20 +19,21 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // ignore: sort_child_properties_last
             Row(children: [IconButton(onPressed: (){
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Notifications(),
+                    builder: (context) => const Notifications(),
                   ),
                 );
             }, 
-            icon: Icon(Icons.notifications_none))], mainAxisAlignment: MainAxisAlignment.end,),
+            icon: const Icon(Icons.notifications_none))], mainAxisAlignment: MainAxisAlignment.end,),
             Text(
               AppLocalizations.of(context)!.translate('home_page_welcome_message'),
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             Text(
               AppLocalizations.of(context)!.translate('home_page_define_interval'),
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.grey[600]),
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                showModalBottom(context, LoadedCoins());
+                showModalBottom(context, const LoadedCoins());
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),
