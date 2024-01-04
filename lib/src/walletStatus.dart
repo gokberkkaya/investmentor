@@ -41,7 +41,6 @@ Future<List<Map<String, dynamic>>> getPoloneixDepositAndWithdraw() async {
 
     return values;
   } catch (error) {
-    // Hata durumlarına karşı başa çıkabilirsiniz.
     throw error;
   }
 }
@@ -80,7 +79,6 @@ Future<List<Map<String, dynamic>>> getMexcDepositAndWithdraw() async {
 
     return values;
   } catch (error) {
-    // Hata durumlarına karşı başa çıkabilirsiniz.
     throw error;
   }
 }
@@ -140,7 +138,6 @@ Future<List<Map<String, dynamic>>> getHuobiDepositAndWithdraw() async {
 
     return values;
   } catch (error) {
-    // Hata durumlarına karşı başa çıkabilirsiniz.
     throw error;
   }
 }
@@ -165,7 +162,6 @@ Future<List<Map<String, dynamic>>> getGateDepositAndWithdraw() async {
 
     return values;
   } catch (error) {
-    // Hata durumlarına karşı başa çıkabilirsiniz.
     throw error;
   }
 }

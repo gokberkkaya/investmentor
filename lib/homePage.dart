@@ -3,6 +3,7 @@ import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/loaded_coins.dart';
 import 'package:investmentor/notifications.dart';
 import 'package:investmentor/showModalBottom.dart';
+import 'package:investmentor/src/detectArbitrage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,6 +13,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  TextEditingController minimumValue = TextEditingController();
+  TextEditingController maximumValue = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -43,6 +46,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Expanded(
                   child: TextFormField(
+                    controller: minimumValue,
                     decoration: InputDecoration(
                       labelText: AppLocalizations.of(context)!.translate('home_page_minimum_percentage'),
                       border: OutlineInputBorder(
@@ -59,6 +63,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(width: 10),
                 Expanded(
                   child: TextFormField(
+                    controller: maximumValue,
                     decoration: InputDecoration(
                       labelText: AppLocalizations.of(context)!.translate('home_page_maximum_percentage'),
                       border: OutlineInputBorder(
@@ -71,8 +76,10 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 30),
             ElevatedButton(
-              onPressed: () {
-                showModalBottom(context, const LoadedCoins());
+              onPressed: ()async {
+                 var result = await detectArbitrage(double.parse(minimumValue.text), double.parse(maximumValue.text));
+
+                showModalBottom(context, LoadedCoins(data: result));
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),

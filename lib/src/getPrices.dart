@@ -124,11 +124,12 @@ Future<List<Map<String, dynamic>>> getGatePrices() async {
           !currencyPair.contains('3L_') &&
           !currencyPair.contains('2S_') &&
           !currencyPair.contains('2L_')) {
+          
         values.add({
           'name': currencyPair.substring(0, currencyPair.length - 5),
-          'value': double.parse(data[i]['last']),
-          'bid':   double.parse(data[i]['highest_bid']),
-          'ask':   double.parse(data[i]['lowest_ask']),
+          'value': double.tryParse(data[i]['last']) ?? 0,
+          'bid':   double.tryParse(data[i]['highest_bid']) ?? 0,
+          'ask':   double.tryParse(data[i]['lowest_ask']) ?? 0,
         });
       }
     }
@@ -153,11 +154,13 @@ Future<List<Map<String, dynamic>>> getHuobiPrices() async {
     for (int i = 0; i < data.length; i++) {
       String symbol = data[i]['symbol'];
       if (symbol.endsWith('usdt')) {
+    
+    
         values.add({
           'name': symbol.substring(0, symbol.length - 4).toUpperCase(),
-          'value': double.parse(data[i]['close']),
-          'bid': double.parse(data[i]['bid']),
-          'ask': double.parse(data[i]['ask']),
+          'value': (data[i]['close']),
+          'bid': (data[i]['bid']),
+          'ask': (data[i]['ask']),
         });
       }
     }

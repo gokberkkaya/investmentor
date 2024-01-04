@@ -115,7 +115,7 @@ Future<List<Map<String, dynamic>>> detectArbitrage(double minPercent, double max
 
     DateTime lastDate = DateTime.now();
     print((lastDate.difference(firstDate)).inSeconds.toString() + " saniye sürdü");
-    print(result);
+    print(result.length);
 
     return result;
   } catch (e) {
