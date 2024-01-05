@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:investmentor/mainPage.dart';
 import 'dart:async';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -7,12 +10,24 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  Future<bool> isUserLoggedIn() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  return prefs.getBool('isLoggedIn') ?? false;
+}
+
+
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 1), () {
+    Timer(Duration(seconds: 1), () async {
       
-      Navigator.of(context).pushReplacementNamed('/firstpage');
+      if(await isUserLoggedIn()){
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MainPage()));
+      }else{
+        Navigator.of(context).pushReplacementNamed('/firstpage');
+      }
+     
     });
   }
     @override

@@ -3,9 +3,16 @@ import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/contact.dart';
 import 'package:investmentor/first_page.dart';
 import 'package:investmentor/languages.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
+
+  Future<void> logoutUser() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setBool('isLoggedIn', false);
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -111,6 +118,7 @@ class Profile extends StatelessWidget {
               width: MediaQuery.of(context).size.width ,
               child: ElevatedButton(
                 onPressed: () {
+                  logoutUser();
                   Navigator.push(
                   context,
                   MaterialPageRoute(

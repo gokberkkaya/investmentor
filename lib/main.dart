@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       _appLocale = Locale(languageCode, '');
     });
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

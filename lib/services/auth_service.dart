@@ -7,10 +7,20 @@ import 'package:flutter/material.dart';
 import 'package:investmentor/mainPage.dart';
 import 'package:investmentor/login.dart';
 import 'package:investmentor/services/email_verification.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 
 class AuthService {
   final userCollection = FirebaseFirestore.instance.collection("users");
   final firebaseAuth = FirebaseAuth.instance;
+
+  Future<void> loginStateSave() async {
+  // Kullanıcı girişi başarılıysa
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setBool('isLoggedIn', true);
+}
+
+
 
   Future<void> signUp(BuildContext context, {
     required String name,
@@ -54,6 +64,7 @@ class AuthService {
 
       if (userCredential.user != null) {
         navigator.push(MaterialPageRoute(builder: (context) => const MainPage()));
+        loginStateSave();
       }
     } on FirebaseAuthException catch (e) {
       Flushbar(
