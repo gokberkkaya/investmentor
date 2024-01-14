@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: ()async {
                  var result = await detectArbitrage(double.parse(minimumValue.text), double.parse(maximumValue.text));
 
-                showModalBottom(context, LoadedCoins(data: result));
+                showModalBottom(context, LoadedCoins(data: result, maximumValue:maximumValue.text,minimumValue: minimumValue.text), 0.9);
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 1, 50),

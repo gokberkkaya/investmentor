@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 
-void showModalBottom(BuildContext context, icerik) {
+void showModalBottom(BuildContext context, icerik, heightValue) {
     showModalBottomSheet(
       enableDrag: true,
       isScrollControlled: true,
       shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(200)),
       context: context,
       builder: (BuildContext context) {
-        return showModalBottomClip(icerik, context);
+        return showModalBottomClip(icerik, context, heightValue);
       },
     );
 }
 
-ClipRRect showModalBottomClip(icerik,context){
+ClipRRect showModalBottomClip(icerik,context, heightValue){
   return ClipRRect(
       borderRadius: const BorderRadius.only(
         topLeft: Radius.circular(20.0),
         topRight: Radius.circular(20.0),
       ),
-      child: ModalBottomIcerik(icerik,context));
+      child: ModalBottomIcerik(icerik,context, heightValue));
 }
 
-Container ModalBottomIcerik(icerik,context) {
+Container ModalBottomIcerik(icerik,context, heightValue) {
   return  Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -38,7 +38,7 @@ Container ModalBottomIcerik(icerik,context) {
                       ),
                     ],
                   ),
-                  height: MediaQuery.of(context).size.height * 0.9,
+                  height: MediaQuery.of(context).size.height * heightValue,
                   child: 
                     icerik,
                     

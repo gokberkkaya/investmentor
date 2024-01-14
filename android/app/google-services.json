@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530925499189",
+    "project_id": "investmentor-3340d",
+    "storage_bucket": "investmentor-3340d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530925499189:android:d8825848049d78c27c527c",
+        "android_client_info": {
+          "package_name": "com.example.investmentor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdXJ9-pXr6qhQ6S4YmNSrzyBxWdGgyuW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

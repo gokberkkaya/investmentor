@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:investmentor/app_localizations.dart';
-import 'package:investmentor/src/detectArbitrage.dart';
 
 class LoadedCoins extends StatelessWidget {
   final data;
-  const LoadedCoins({required this.data});
+  final maximumValue;
+  final minimumValue;
+  const LoadedCoins({required this.data, required this.maximumValue,required this.minimumValue});
 
   @override
   Widget build(BuildContext context) {
-    int lowerBound = -3;
-    int upperBound = 10;
+    int lowerBound = int.parse(minimumValue);
+    int upperBound =int.parse(maximumValue);
 
     return Scaffold(
       backgroundColor: Colors.white,
