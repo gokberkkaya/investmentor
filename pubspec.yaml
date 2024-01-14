@@ -29,6 +29,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   circle_flags: ^0.0.3
+  flutter_local_notifications: ^16.3.0
+  timezone: ^0.9.2
   sqflite:
   crypto: ^3.0.3
   http: 1.1.0
@@ -45,6 +47,7 @@ dependencies:
   cloud_firestore: ^4.13.6
   firebase_auth: ^4.15.3
   another_flushbar: ^1.12.30
+  firebase_messaging: ^14.7.10
   firebase_core: ^2.24.2
 
 dev_dependencies:

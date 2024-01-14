@@ -16,7 +16,7 @@ class AuthService {
     // Kullanıcı girişi başarılıysa
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    await prefs.remove('loggedUserId');
+    await prefs.setString('loggedUserId', id);
   }
 
   Future<void> signUp(BuildContext context,
