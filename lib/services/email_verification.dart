@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:another_flushbar/flushbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:investmentor/create_account.dart';
+import 'package:investmentor/login.dart';
 import 'package:investmentor/mainPage.dart';
 
 class EmailVerification extends StatefulWidget {
@@ -27,8 +27,8 @@ class _EmailVerificationState extends State<EmailVerification> {
     }
 
     timer = Timer.periodic(
-     const Duration(seconds: 3),
-        (_) => checkEmailVerified(),
+      const Duration(seconds: 3),
+      (_) => checkEmailVerified(),
     );
   }
 
@@ -52,18 +52,24 @@ class _EmailVerificationState extends State<EmailVerification> {
   Future sendVerificationEmail() async {
     try {
       final user = FirebaseAuth.instance.currentUser!;
-  
+
       await user.sendEmailVerification();
+
+      Flushbar(
+        backgroundColor: Colors.green,
+        message: "E-postana doğrulama bağlantısı gönderildi!",
+        duration: Duration(seconds: 3),
+      ).show(context);
     } on FirebaseAuthException catch (e) {
       Flushbar(
-          message: e.message!,
-          duration: Duration(seconds: 3),
-        ).show(context);
+        backgroundColor: Colors.red,
+        message: e.message!,
+        duration: Duration(seconds: 3),
+      ).show(context);
     }
   }
 
   @override
-  Widget build(BuildContext context) => isEmailVerified
-    ? const MainPage()
-    : const CreateAccount();
+  Widget build(BuildContext context) =>
+      isEmailVerified ? const MainPage() : const Login();
 }

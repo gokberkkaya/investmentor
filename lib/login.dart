@@ -15,8 +15,6 @@ class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +44,7 @@ class _LoginState extends State<Login> {
             TextFormField(
               controller: _emailController,
               decoration: InputDecoration(
-                labelText: AppLocalizations.of(context)!.translate('login_username'),
+                labelText: AppLocalizations.of(context)!.translate('login_email'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                   borderSide: const BorderSide(color: Colors.grey),
