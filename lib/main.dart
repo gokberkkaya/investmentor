@@ -1,5 +1,7 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:investmentor/app_localizations.dart';
+import 'package:investmentor/services/notification_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'first_page.dart';
 import 'splash_screen.dart';
@@ -8,11 +10,19 @@ import 'services/firebase_options.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp();
+  print("Handling a background message: ${message.messageId}");
+}
+
 void main() async {
+  
+
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   runApp(const MyApp());
 }
 
@@ -25,12 +35,18 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final NotificationService notificationService = NotificationService();
   Locale ?_appLocale;
+
+  
+
 
   @override
   void initState() {
     super.initState();
     _loadLanguagePreference();
+    notificationService.initialize(); // Bildirim servisini başlat
+    notificationService.scheduleDailyTenAMNotification(); // Her gün saat 10:00'da bildirim planla
   }
 
   Future<void> _loadLanguagePreference() async {

@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     // 'loggedUserId' anahtarını kontrol edin, eğer varsa ve null değilse true döndürün
     String? userId = prefs.getString('loggedUserId');
-    print(userId);
+    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA:$userId");
     return userId != null;
   }
 
