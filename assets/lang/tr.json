@@ -3,17 +3,15 @@
     "404_message": "Bir şeyler ters gitti,\nlütfen tekrar dene",
     
     "contact_title": "İletişim Bilgileri",
-    "contact_username": "Kullanıcı Adı",
+    "contact_username": "Ad Soyad",
     "contact_job": "Meslek",
-    "contact_birthday": "Doğum Günü",
-    "contact_gender": "Cinsiyet",
     "contact_email": "E-posta",
     "contact_phone_number": "Telefon Numarası",
     "contact_update_button": "Güncelle",
 
     "create_account_title": "Bir hesap oluştur",
     "create_account_subtitle": "Kolayca hesap oluştur ve işleme başla",
-    "create_account_username": "Kullanıcı Adı",
+    "create_account_username": "Ad Soyad",
     "create_account_email": "E-posta",
     "create_account_password": "Şifre",
     "create_account_button": "Hesap Oluştur",
@@ -43,7 +41,7 @@
     "loaded_coins_close_button": "Kapat",
 
     "login_title": "Giriş Yap",
-    "login_username": "Kullanıcı Adı",
+    "login_email": "E-posta",
     "login_password": "Şifre",
     "login_button": "Giriş Yap",
     "login_forgot_password": "Şifremi Unuttum",

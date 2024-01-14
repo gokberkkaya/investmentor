@@ -19,91 +19,86 @@ class AuthService {
     await prefs.remove('loggedUserId');
   }
 
-  Future<void> signUp(BuildContext context, {
-    required String name,
-    required String email,
-    required String password
-  }) async {
+  Future<void> signUp(BuildContext context,
+      {required String name,
+      required String email,
+      required String password}) async {
     final navigator = Navigator.of(context);
 
     try {
       final UserCredential userCredential = await firebaseAuth
-        .createUserWithEmailAndPassword(email: email, password: password);
+          .createUserWithEmailAndPassword(email: email, password: password);
       final user = userCredential.user;
 
       if (user != null) {
-        _registerUser(name: name, email: email, password: password, uid: user.uid);
+        _registerUser(
+            name: name, email: email, password: password, uid: user.uid);
 
-        Flushbar(
-          message: "E-postana doğrulama bağlantısı gönderildi!",
-          duration: Duration(seconds: 3),
-        ).show(context);
-
-        navigator.push(MaterialPageRoute(builder: (context) => const EmailVerification()));
+        navigator.push(
+            MaterialPageRoute(builder: (context) => const EmailVerification()));
       }
     } on FirebaseAuthException catch (e) {
       Flushbar(
-          message: e.message!,
-          duration: Duration(seconds: 3),
-        ).show(context);
-      
+        backgroundColor: Colors.red,
+        message: e.message!,
+        duration: Duration(seconds: 3),
+      ).show(context);
     }
   }
 
-  Future<void> signIn(BuildContext context, {
-    required String email,
-    required String password
-  }) async {
+  Future<void> signIn(BuildContext context,
+      {required String email, required String password}) async {
     final navigator = Navigator.of(context);
-  
+
     try {
       final UserCredential userCredential = await firebaseAuth
-        .signInWithEmailAndPassword(email: email, password: password);
+          .signInWithEmailAndPassword(email: email, password: password);
 
       loginStateSave(userCredential.user?.uid);
 
       if (userCredential.user != null) {
-        navigator.push(MaterialPageRoute(builder: (context) => const MainPage()));
+        navigator
+            .push(MaterialPageRoute(builder: (context) => const MainPage()));
       }
     } on FirebaseAuthException catch (e) {
       Flushbar(
-          message: e.message!,
-          duration: Duration(seconds: 3),
-        ).show(context);
+        backgroundColor: Colors.red,
+        message: e.message!,
+        duration: Duration(seconds: 3),
+      ).show(context);
     }
   }
 
-  Future<void> _registerUser({
-    required String name,
-    required String email,
-    required String password,
-    required String uid
-  }) async {
-    await userCollection.doc(uid).set({
-      "name": name,
-      "email": email,
-      "password": password
-    });
+  Future<void> _registerUser(
+      {required String name,
+      required String email,
+      required String password,
+      required String uid}) async {
+    await userCollection
+        .doc(uid)
+        .set({"name": name, "email": email, "password": password});
   }
 
-  Future<void> resetPassword(BuildContext context, {
-    required String email
-  }) async {
+  Future<void> resetPassword(BuildContext context,
+      {required String email}) async {
     final navigator = Navigator.of(context);
 
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
-      Flushbar(
-          message: "Şifre sıfırlama e-postası gönderildi!",
-          duration: Duration(seconds: 3),
-        ).show(context);
-      
+
       navigator.push(MaterialPageRoute(builder: (context) => const Login()));
+
+      Flushbar(
+        backgroundColor: Colors.green,
+        message: "Şifre sıfırlama e-postası gönderildi!",
+        duration: Duration(seconds: 3),
+      ).show(context);
     } on FirebaseAuthException catch (e) {
       Flushbar(
-          message: e.message!,
-          duration: Duration(seconds: 3),
-        ).show(context);
+        backgroundColor: Colors.red,
+        message: e.message!,
+        duration: Duration(seconds: 3),
+      ).show(context);
     }
   }
 }
