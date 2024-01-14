@@ -5,7 +5,7 @@ class LoadedCoins extends StatelessWidget {
   final data;
   final maximumValue;
   final minimumValue;
-  const LoadedCoins({required this.data, required this.maximumValue,required this.minimumValue});
+  const LoadedCoins({required this.data,  this.maximumValue,this.minimumValue});
 
   @override
   Widget build(BuildContext context) {
