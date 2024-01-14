@@ -15,7 +15,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  late UserData _userData;
+  late UserData _userData = UserData(name: '', jobTitle: '');
 
   @override
   void initState() {
@@ -49,13 +49,13 @@ class _ProfileState extends State<Profile> {
   Future<void> _logoutUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    await prefs.setBool('isLoggedIn', false);
+    await prefs.remove('loggedUserId');
   }
 
   @override
   Widget build(BuildContext context) {
     _fetchUserProfile();
-
+    
     return Scaffold(
       body: Center(
         child: Padding(

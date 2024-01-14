@@ -17,7 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController minimumValue = TextEditingController();
   TextEditingController maximumValue = TextEditingController();
-  UserData? _userData; // Değişiklik: Nullable yaptık
+  late UserData _userData = UserData(name: '');
 
   @override
   void initState() {
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    _fetchUserProfile();
+    
 
     return Padding(
       padding: const EdgeInsets.all(20.0),
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           Text(
-            '${AppLocalizations.of(context)!.translate('home_page_welcome_message')}, ${ _userData?.name ?? '' }.',
+            '${AppLocalizations.of(context)!.translate('home_page_welcome_message')}, ${ _userData.name }.',
             style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 60),
