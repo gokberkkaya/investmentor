@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:another_flushbar/flushbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
 import 'package:flutter/material.dart';
 import 'package:investmentor/mainPage.dart';
 import 'package:investmentor/login.dart';
@@ -15,12 +14,11 @@ class AuthService {
   final firebaseAuth = FirebaseAuth.instance;
 
   Future<void> loginStateSave() async {
-  // Kullanıcı girişi başarılıysa
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  await prefs.setBool('isLoggedIn', true);
-}
+    // Kullanıcı girişi başarılıysa
+    SharedPreferences prefs = await SharedPreferences.getInstance();
 
-
+    await prefs.setBool('isLoggedIn', true);
+  }
 
   Future<void> signUp(BuildContext context, {
     required String name,
@@ -32,9 +30,10 @@ class AuthService {
     try {
       final UserCredential userCredential = await firebaseAuth
         .createUserWithEmailAndPassword(email: email, password: password);
+      final user = userCredential.user;
 
-      if (userCredential.user != null) {
-        _registerUser(name: name, email: email, password: password);
+      if (user != null) {
+        _registerUser(name: name, email: email, password: password, uid: user.uid);
 
         Flushbar(
           message: "E-postana doğrulama bağlantısı gönderildi!",
@@ -77,9 +76,10 @@ class AuthService {
   Future<void> _registerUser({
     required String name,
     required String email,
-    required String password
+    required String password,
+    required String uid
   }) async {
-    await userCollection.doc().set({
+    await userCollection.doc(uid).set({
       "name": name,
       "email": email,
       "password": password

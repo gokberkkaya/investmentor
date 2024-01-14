@@ -4,11 +4,11 @@
     
     "contact_title": "İletişim Bilgileri",
     "contact_username": "Kullanıcı Adı",
+    "contact_job": "Meslek",
     "contact_birthday": "Doğum Günü",
     "contact_gender": "Cinsiyet",
     "contact_email": "E-posta",
     "contact_phone_number": "Telefon Numarası",
-    "contact_address": "Adres",
     "contact_update_button": "Güncelle",
 
     "create_account_title": "Bir hesap oluştur",
@@ -24,7 +24,7 @@
     "first_page_create_account_button": "Hesap Oluştur",
     "first_page_login_button": "Giriş Yap",
 
-    "home_page_welcome_message": "Hoşgeldin, Ahmet.",
+    "home_page_welcome_message": "Hoşgeldin",
     "home_page_define_interval": "İki borsa arasındaki fark aralığını belirle:",
     "home_page_minimum_percentage": "minimum %",
     "home_page_maximum_percentage": "maximum %",
