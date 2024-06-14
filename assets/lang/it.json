@@ -1,0 +1,69 @@
+{
+    "404_ops": "Ops!",
+    "404_message": "Qualcosa è andato storto,\nper favore riprova",
+
+    "contact_title": "Informazioni di Contatto",
+    "contact_username": "Nome utente",
+    "contact_birthday": "Data di nascita",
+    "contact_gender": "Genere",
+    "contact_email": "Email",
+    "contact_phone_number": "Numero di telefono",
+    "contact_address": "Indirizzo",
+    "contact_update_button": "Aggiorna",
+
+    "create_account_title": "Crea un Account",
+    "create_account_subtitle": "Crea facilmente un account e inizia",
+    "create_account_username": "Nome utente",
+    "create_account_email": "Email",
+    "create_account_password": "Password",
+    "create_account_button": "Crea Account",
+    "create_account_already_have_account": "Hai già un account?",
+
+    "first_page_title": "Un clic per padroneggiare il mondo delle criptovalute",
+    "first_page_description": "Rileva le differenze percentuali nei prezzi delle monete elencate in diverse borse criptovalute",
+    "first_page_create_account_button": "Crea Account",
+    "first_page_login_button": "Accedi",
+
+    "home_page_welcome_message": "Benvenuto, Ahmet.",
+    "home_page_define_interval": "Imposta l'intervallo di differenza tra due scambi:",
+    "home_page_minimum_percentage": "minimo %",
+    "home_page_maximum_percentage": "massimo %",
+    "home_page_load_coins_button": "Carica Monete in Questo Intervallo",
+
+    "languages_title": "Preferenza Linguistica",
+
+    "loaded_coins_and": " e ",
+    "loaded_coins_range": " monete nell'intervallo",
+    "loaded_coins_suitability_status": "Stato di idoneità per il trading",
+    "loaded_coins_cheapest_exchange": "Borsa più economica",
+    "loaded_coins_most_expensive_exchange": "Borsa più costosa",
+    "loaded_coins_price_difference": "Differenza tra due scambi",
+    "loaded_coins_info_dialog_content": "Calcolato sulla base di 500 dollari. Se non c'è domanda di vendita a questa cifra, la moneta viene mostrata in rosso.",
+    "loaded_coins_close_button": "Chiudi",
+
+    "login_title": "Accedi",
+    "login_username": "Nome utente",
+    "login_password": "Password",
+    "login_button": "Accedi",
+    "login_forgot_password": "Hai dimenticato la password?",
+
+    "main_page_home_tab": "Home",
+    "main_page_search_tab": "Ricerca Moneta",
+    "main_page_profile_tab": "Profilo",
+
+    "notifications": "Notifiche",
+
+    "profile_title": "Profilo",
+    "profile_contact_info_button": "Informazioni di Contatto",
+    "profile_language_button": "Lingua",
+    "profile_logout_button": "Esci",
+
+    "reset_password_title": "Reimposta Password",
+    "reset_password_description": "Ti invieremo una email per reimpostare la tua password",
+    "reset_password_email_label": "Email",
+    "reset_password_reset_button": "Reimposta",
+
+    "search_coin_title": "Ricerca Moneta",
+    "search_coin_coin_select_label": "Seleziona Moneta",
+    "search_coin_search_button": "Ricerca"
+}

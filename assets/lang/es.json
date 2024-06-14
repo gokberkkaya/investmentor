@@ -1,0 +1,69 @@
+{
+    "404_ops": "¡Ups!",
+    "404_message": "Algo salió mal,\npor favor inténtalo de nuevo",
+
+    "contact_title": "Información de Contacto",
+    "contact_username": "Nombre de usuario",
+    "contact_birthday": "Fecha de nacimiento",
+    "contact_gender": "Género",
+    "contact_email": "Correo electrónico",
+    "contact_phone_number": "Número de teléfono",
+    "contact_address": "Dirección",
+    "contact_update_button": "Actualizar",
+
+    "create_account_title": "Crear una Cuenta",
+    "create_account_subtitle": "Crea fácilmente una cuenta y comienza",
+    "create_account_username": "Nombre de usuario",
+    "create_account_email": "Correo electrónico",
+    "create_account_password": "Contraseña",
+    "create_account_button": "Crear Cuenta",
+    "create_account_already_have_account": "¿Ya tienes una cuenta?",
+
+    "first_page_title": "Un clic para dominar el mundo de las criptomonedas",
+    "first_page_description": "Detecta las diferencias porcentuales en los precios de las monedas listadas en diferentes intercambios de criptomonedas",
+    "first_page_create_account_button": "Crear Cuenta",
+    "first_page_login_button": "Iniciar Sesión",
+
+    "home_page_welcome_message": "Bienvenido, Ahmet.",
+    "home_page_define_interval": "Establecer el intervalo de diferencia entre dos intercambios:",
+    "home_page_minimum_percentage": "mínimo %",
+    "home_page_maximum_percentage": "máximo %",
+    "home_page_load_coins_button": "Cargar Monedas en Este Rango",
+
+    "languages_title": "Preferencia de Idioma",
+
+    "loaded_coins_and": " y ",
+    "loaded_coins_range": " monedas en el rango",
+    "loaded_coins_suitability_status": "Estado de idoneidad para el comercio",
+    "loaded_coins_cheapest_exchange": "Intercambio más barato",
+    "loaded_coins_most_expensive_exchange": "Intercambio más caro",
+    "loaded_coins_price_difference": "Diferencia entre dos intercambios",
+    "loaded_coins_info_dialog_content": "Calculado en base a 500 dólares. Si no hay demanda de venta a esta cantidad, la moneda se muestra en rojo.",
+    "loaded_coins_close_button": "Cerrar",
+
+    "login_title": "Iniciar Sesión",
+    "login_username": "Nombre de usuario",
+    "login_password": "Contraseña",
+    "login_button": "Iniciar Sesión",
+    "login_forgot_password": "¿Olvidaste tu contraseña?",
+
+    "main_page_home_tab": "Inicio",
+    "main_page_search_tab": "Buscar Moneda",
+    "main_page_profile_tab": "Perfil",
+
+    "notifications": "Notificaciones",
+
+    "profile_title": "Perfil",
+    "profile_contact_info_button": "Información de Contacto",
+    "profile_language_button": "Idioma",
+    "profile_logout_button": "Cerrar Sesión",
+
+    "reset_password_title": "Restablecer Contraseña",
+    "reset_password_description": "Te enviaremos un correo electrónico para restablecer tu contraseña",
+    "reset_password_email_label": "Correo electrónico",
+    "reset_password_reset_button": "Restablecer",
+
+    "search_coin_title": "Buscar Moneda",
+    "search_coin_coin_select_label": "Seleccionar Moneda",
+    "search_coin_search_button": "Buscar"
+}

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:investmentor/app_localizations.dart';
 import 'package:investmentor/services/auth_service.dart';
-import 'login.dart';
 
-class CreateAccount extends StatefulWidget {
-  const CreateAccount({super.key});
+import 'reset_password.dart';
+
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<CreateAccount> createState() => _CreateAccountState();
+  State<Login> createState() => _LoginState();
 }
 
-class _CreateAccountState extends State<CreateAccount> {
-  final _nameController = TextEditingController();
+class _LoginState extends State<Login> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
@@ -35,31 +35,16 @@ class _CreateAccountState extends State<CreateAccount> {
             
           const SizedBox(height: 10),
             Text(
-              AppLocalizations.of(context)!.translate('create_account_title'),
+              AppLocalizations.of(context)!.translate('login_title'),
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 10),
-            Text(
-              AppLocalizations.of(context)!.translate('create_account_subtitle'),
-              style: const TextStyle(fontSize: 16),
-            ),
+
             const SizedBox(height: 40),
-            TextFormField(
-              controller: _nameController,
-              decoration: InputDecoration(
-                labelText: AppLocalizations.of(context)!.translate('create_account_username'),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                  borderSide: const BorderSide(color: Colors.grey),
-                ),
-              ),
-            ),
-            const SizedBox(height: 10),
             TextFormField(
               controller: _emailController,
               decoration: InputDecoration(
-                labelText: AppLocalizations.of(context)!.translate('create_account_email'),
+                labelText: AppLocalizations.of(context)!.translate('login_email'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                   borderSide: const BorderSide(color: Colors.grey),
@@ -67,11 +52,12 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             const SizedBox(height: 10),
+            
             TextFormField(
               controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: AppLocalizations.of(context)!.translate('create_account_password'),
+                labelText: AppLocalizations.of(context)!.translate('login_password'),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                   borderSide: const BorderSide(color: Colors.grey),
@@ -81,9 +67,8 @@ class _CreateAccountState extends State<CreateAccount> {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                AuthService().signUp(
+                AuthService().signIn(
                   context,
-                  name: _nameController.text,
                   email: _emailController.text,
                   password: _passwordController.text
                 );
@@ -94,10 +79,12 @@ class _CreateAccountState extends State<CreateAccount> {
                   borderRadius: BorderRadius.circular(20.0), // Oval hale getir
                 ), // Yeşil renk
               ),
+              
               child: Padding(
-                padding:  const EdgeInsets.all(10.0),
+                
+                padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  AppLocalizations.of(context)!.translate('create_account_button'),
+                  AppLocalizations.of(context)!.translate('login_button'),
                   style: const TextStyle(fontSize: 18),
                 ),
               ),
@@ -107,11 +94,11 @@ class _CreateAccountState extends State<CreateAccount> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Login(),
+                    builder: (context) => const ResetPassword(),
                   ),
                 );
             }, 
-            child:  Text(AppLocalizations.of(context)!.translate('create_account_already_have_account'), style: const TextStyle(color:Color.fromARGB(1000 ,0, 198, 121), fontSize: 16),))
+            child: Text(AppLocalizations.of(context)!.translate('login_forgot_password'), style: const TextStyle(color:Color.fromARGB(1000 ,0, 198, 121), fontSize: 16),))
           ],
         ),
       ),

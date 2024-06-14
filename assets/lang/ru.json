@@ -1,0 +1,69 @@
+{
+    "404_ops": "Упс!",
+    "404_message": "Что-то пошло не так,\nпожалуйста, попробуйте снова",
+
+    "contact_title": "Контактная информация",
+    "contact_username": "Имя пользователя",
+    "contact_birthday": "Дата рождения",
+    "contact_gender": "Пол",
+    "contact_email": "Электронная почта",
+    "contact_phone_number": "Номер телефона",
+    "contact_address": "Адрес",
+    "contact_update_button": "Обновить",
+
+    "create_account_title": "Создать аккаунт",
+    "create_account_subtitle": "Легко создайте аккаунт и начните",
+    "create_account_username": "Имя пользователя",
+    "create_account_email": "Электронная почта",
+    "create_account_password": "Пароль",
+    "create_account_button": "Создать аккаунт",
+    "create_account_already_have_account": "Уже есть аккаунт?",
+
+    "first_page_title": "Один клик, чтобы овладеть миром криптовалют",
+    "first_page_description": "Обнаруживайте процентные различия в ценах на монеты, перечисленные на разных криптобиржах",
+    "first_page_create_account_button": "Создать аккаунт",
+    "first_page_login_button": "Войти",
+
+    "home_page_welcome_message": "Добро пожаловать, Ахмет.",
+    "home_page_define_interval": "Установите интервал разницы между двумя биржами:",
+    "home_page_minimum_percentage": "минимальный %",
+    "home_page_maximum_percentage": "максимальный %",
+    "home_page_load_coins_button": "Загрузить монеты в этом диапазоне",
+
+    "languages_title": "Языковые настройки",
+
+    "loaded_coins_and": " и ",
+    "loaded_coins_range": " монет в диапазоне",
+    "loaded_coins_suitability_status": "Статус пригодности для торговли",
+    "loaded_coins_cheapest_exchange": "Самая дешевая биржа",
+    "loaded_coins_most_expensive_exchange": "Самая дорогая биржа",
+    "loaded_coins_price_difference": "Разница между двумя биржами",
+    "loaded_coins_info_dialog_content": "Рассчитывается на основе 500 долларов. Если нет спроса на продажу на эту сумму, монета отображается красным цветом.",
+    "loaded_coins_close_button": "Закрыть",
+
+    "login_title": "Войти",
+    "login_username": "Имя пользователя",
+    "login_password": "Пароль",
+    "login_button": "Войти",
+    "login_forgot_password": "Забыли пароль?",
+
+    "main_page_home_tab": "Главная",
+    "main_page_search_tab": "Поиск монеты",
+    "main_page_profile_tab": "Профиль",
+
+    "notifications": "Уведомления",
+
+    "profile_title": "Профиль",
+    "profile_contact_info_button": "Контактная информация",
+    "profile_language_button": "Язык",
+    "profile_logout_button": "Выйти",
+
+    "reset_password_title": "Сброс пароля",
+    "reset_password_description": "Мы отправим вам электронное письмо для сброса пароля",
+    "reset_password_email_label": "Электронная почта",
+    "reset_password_reset_button": "Сбросить",
+
+    "search_coin_title": "Поиск монеты",
+    "search_coin_coin_select_label": "Выберите монету",
+    "search_coin_search_button": "Поиск"
+}

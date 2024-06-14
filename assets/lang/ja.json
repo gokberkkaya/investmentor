@@ -1,0 +1,69 @@
+{
+    "404_ops": "おっとっと！",
+    "404_message": "何か問題が発生しました。\nもう一度お試しください",
+
+    "contact_title": "連絡先情報",
+    "contact_username": "ユーザー名",
+    "contact_birthday": "生年月日",
+    "contact_gender": "性別",
+    "contact_email": "メール",
+    "contact_phone_number": "電話番号",
+    "contact_address": "住所",
+    "contact_update_button": "更新",
+
+    "create_account_title": "アカウントを作成",
+    "create_account_subtitle": "簡単にアカウントを作成し、開始",
+    "create_account_username": "ユーザー名",
+    "create_account_email": "メール",
+    "create_account_password": "パスワード",
+    "create_account_button": "アカウントを作成",
+    "create_account_already_have_account": "すでにアカウントをお持ちですか？",
+
+    "first_page_title": "暗号通貨の世界をマスターするためのワンクリック",
+    "first_page_description": "異なる仮想通貨取引所にリストされたコインの価格のパーセンテージ差を検出します",
+    "first_page_create_account_button": "アカウントを作成",
+    "first_page_login_button": "ログイン",
+
+    "home_page_welcome_message": "ようこそ、Ahmet さん。",
+    "home_page_define_interval": "2つの取引所間の差異間隔を設定:",
+    "home_page_minimum_percentage": "最小 %",
+    "home_page_maximum_percentage": "最大 %",
+    "home_page_load_coins_button": "この範囲のコインを読み込む",
+
+    "languages_title": "言語設定",
+
+    "loaded_coins_and": " と ",
+    "loaded_coins_range": " 範囲内のコイン",
+    "loaded_coins_suitability_status": "取引適性ステータス",
+    "loaded_coins_cheapest_exchange": "最安取引所",
+    "loaded_coins_most_expensive_exchange": "最も高価な取引所",
+    "loaded_coins_price_difference": "2つの取引所間の価格差",
+    "loaded_coins_info_dialog_content": "500ドルを基準に計算されます。この金額での売却の需要がない場合、コインは赤色で表示されます。",
+    "loaded_coins_close_button": "閉じる",
+
+    "login_title": "ログイン",
+    "login_username": "ユーザー名",
+    "login_password": "パスワード",
+    "login_button": "ログイン",
+    "login_forgot_password": "パスワードを忘れましたか？",
+
+    "main_page_home_tab": "ホーム",
+    "main_page_search_tab": "コインを検索",
+    "main_page_profile_tab": "プロフィール",
+
+    "notifications": "通知",
+
+    "profile_title": "プロフィール",
+    "profile_contact_info_button": "連絡先情報",
+    "profile_language_button": "言語",
+    "profile_logout_button": "ログアウト",
+
+    "reset_password_title": "パスワードをリセット",
+    "reset_password_description": "パスワードをリセットするためのメールをお送りします",
+    "reset_password_email_label": "メール",
+    "reset_password_reset_button": "リセット",
+
+    "search_coin_title": "コインを検索",
+    "search_coin_coin_select_label": "コインを選択",
+    "search_coin_search_button": "検索"
+}
